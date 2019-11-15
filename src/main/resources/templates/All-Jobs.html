@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Published Date
+        </th>
+    </tr>
+    <tr th:each="job : ${jobs}">
+        <td><span th:text="*{job.id}"> ID </span></td>
+        <td><span th:text="*{job.name}"> Name </span></td>
+        <td><span th:text="*{job.description}"> Description </span></td>
+        <td><span th:text="*{job.publishedDate}"> Published Date </span></td>
+    </tr>
+</table>
+</body>
+</html>
