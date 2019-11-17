@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link href="../css/styles.css" th:href="@{/css/styles.css}" media="all" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title th:text="#{all_jobs.page.title.text}">Title</title>
+</head>
+<body>
+<h1 th:text="#{all_jobs.page.h1.title.text}">Title</h1><br/>
+<a th:href="@{/user/3/bids}" th:text="#{all_jobs.page.user_bids.text}">User bids page</a><br/>
+<table>
+    <tr>
+        <th th:text="#{all_jobs.page.id.column.text}">
+            ID
+        </th>
+        <th th:text="#{all_jobs.page.name.column.text}">
+            Name
+        </th>
+        <th th:text="#{all_jobs.page.description.column.text}">
+            Description
+        </th>
+        <th th:text="#{all_jobs.page.published_date.column.text}">
+            Published Date
+        </th>
+        <th th:text="#{all_jobs.page.published_by.column.text}">
+            Published By
+        </th>
+    </tr>
+    <tr th:each="job : ${jobs}">
+        <td><span th:text="*{job.id}"> ID </span></td>
+        <td><span th:text="*{job.name}"> Name </span></td>
+        <td><span th:text="*{job.description}"> Description </span></td>
+        <td><span th:text="*{job.publishedDate}"> Published Date </span></td>
+        <td><span th:text="*{job.user.name}"> Published By </span></td>
+    </tr>
+</table>
+</body>
+</html>

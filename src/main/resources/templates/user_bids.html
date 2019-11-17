@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link href="../css/styles.css" th:href="@{/css/styles.css}" media="all" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title th:text="#{user_bids.page.title.text}">User-Bids</title>
+</head>
+<body>
+<h1 th:text="#{user_bids.page.h1.title.text}">Title</h1><br/>
+<a th:href="@{/jobs}" th:text="#{user_bids.page.all_jobs.text}">All jobs page</a><br/>
+<span th:text="#{user_bids.info.text}">Info text</span><br/>
+<span th:if="${!bids.empty}" th:text="${bids.get(0).user.name}">User's name</span><br/>
+<table>
+    <tr>
+        <th th:text="#{user_bids.page.id.column.text}">
+            ID
+        </th>
+        <th th:text="#{user_bids.page.amount.column.text}">
+            Amount
+        </th>
+        <th th:text="#{user_bids.page.job.name.column.text}">
+            Job name
+        </th>
+    </tr>
+    <tr th:each="bid : ${bids}">
+        <td><span th:text="*{bid.id}"> ID </span></td>
+        <td><span th:text="*{bid.amount}"> Amount </span></td>
+        <td><span th:text="*{bid.job.name}"> Job </span></td>
+    </tr>
+</table>
+</body>
+</html>

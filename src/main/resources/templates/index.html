@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link href="../css/styles.css" th:href="@{/css/styles.css}" media="all" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title th:text="#{index.page.title.text}">Title</title>
+</head>
+<body>
+<span th:text="#{index.page.info.text}">Default info</span><br/>
+<a th:href="@{/jobs}" th:text="#{index.page.all_jobs.text}">All jobs</a><br/>
+<a th:href="@{/user/3/bids}" th:text="#{index.page.user_bids.text}">User bids</a>
+</body>
+</html>

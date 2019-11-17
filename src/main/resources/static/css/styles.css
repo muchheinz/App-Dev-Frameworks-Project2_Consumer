@@ -1,0 +1,48 @@
+
+body {
+    font-family: verdana;
+}
+
+.buttons, .links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a:hover, input[type='submit']:hover {
+    background-color: slategray;
+    cursor: pointer;
+}
+
+.title {
+    background: darkslategray;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+    color: white;
+    font-family: verdana;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkslategray;
+    color: white;
+}
+
+table td, table tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
